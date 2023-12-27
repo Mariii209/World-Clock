@@ -4,14 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Time Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
     <div class="container">
       <header>
         <h1>World Wide Clock</h1>
-        <div class="dropdown-cities">
-          <select name="" id="">
+        <div>
+          <select name="" id="" class="dropdown-cities">
             <option value="">Select a City...</option>
             <option value="America/Phoenix">Phoenix</option>
             <option value="Asia/Dubai ">Dubai</option>
@@ -22,19 +28,19 @@
       </header>
       <main>
         <div class="current-timezone">
-          <h2>Modesto</h2>
-          <div>Decemeber 21 2023</div>
-          <div>3:13:14 pm</div>
+          <h2 class="city-name">Modesto</h2>
+          <div class="current-date">Decemeber 21 2023</div>
+          <div class="current-time">3:13:14 pm</div>
         </div>
         <div class="current-timezone">
-          <h2>New York</h2>
-          <div>Decemeber 21 2023</div>
-          <div>3:13:14 pm</div>
+          <h2 class="city-name">New York</h2>
+          <div class="current-date">Decemeber 21 2023</div>
+          <div class="current-time">3:13:14 pm</div>
         </div>
         <div class="current-timezone">
-          <h2>London</h2>
-          <div>Decemeber 21 2023</div>
-          <div>3:13:14 pm</div>
+          <h2 class="city-name">London</h2>
+          <div class="current-date">Decemeber 21 2023</div>
+          <div class="current-time">3:13:14 pm</div>
         </div>
       </main>
     </div>
