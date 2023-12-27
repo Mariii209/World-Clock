@@ -32,6 +32,7 @@ h2 {
 
 .current-date {
   margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 .current-time {
@@ -59,6 +60,11 @@ h2 {
   padding-left: 5%;
   padding-top: 20px;
   font-family: "Poppins", sans-serif;
+  border-bottom: 1px dashed gray;
+}
+
+a {
+  text-decoration: none;
 }
 
 footer {
