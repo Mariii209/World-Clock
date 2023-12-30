@@ -65,6 +65,10 @@ h2 {
   font-size: 1.5em;
 }
 
+.am-pm {
+  font-size: 15px;
+}
+
 a {
   text-decoration: none;
 }
