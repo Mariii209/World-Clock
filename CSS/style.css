@@ -76,3 +76,27 @@ a {
 footer {
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  /* Styles for smaller screens */
+  .container {
+    width: 90%;
+    padding: 3%;
+  }
+
+  .current-timezone {
+    flex-direction: column;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
