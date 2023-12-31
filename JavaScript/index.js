@@ -1,14 +1,16 @@
 function timeZoneDateAndTime() {
-  //Modesto current date and time
-  let modestoCityElement = document.querySelector("#modesto");
-  if (modestoCityElement) {
-    let modestoDateElement = modestoCityElement.querySelector("#modesto-date");
-    let modestoTimeElement = modestoCityElement.querySelector("#modesto-time");
+  //Los Angeles current date and time
+  let losAngelesCityElement = document.querySelector("#losAngeles");
+  if (losAngelesCityElement) {
+    let losAngelesDateElement =
+      losAngelesCityElement.querySelector("#losAngeles-date");
+    let losAngelesTimeElement =
+      losAngelesCityElement.querySelector("#losAngeles-time");
 
-    modestoDateElement.innerHTML = moment()
+    losAngelesDateElement.innerHTML = moment()
       .tz("America/Los_Angeles")
       .format("MMMM D, YYYY");
-    modestoTimeElement.innerHTML = `${moment()
+    losAngelesTimeElement.innerHTML = `${moment()
       .tz("America/Los_Angeles")
       .format("h:mm:ss")} <small class="am-pm"> ${moment()
       .tz("America/Los_Angeles")
@@ -48,29 +50,36 @@ function timeZoneDateAndTime() {
   }
 }
 
-function selectingCity(event) {
+function selectingCity() {
+  let citiesDropDownSelect = document.querySelector(".dropdown-cities");
   let cityInterfaceElement = document.querySelector(".city");
-  let cityname = event.target.value.split("/")[1].replace("_", " ");
-  let cityDate = moment().tz(event.target.value).format("MMMM D, YYYY");
-  let cityTime = `${moment()
-    .tz(event.target.value)
-    .format("h:mm:ss")} <small class="am-pm"> ${moment()
-    .tz("Europe/London")
-    .format("A")} </small>`;
 
-  cityInterfaceElement.innerHTML = `<div class="current-timezone">
-            <div>
-            <h2 class="city-name">${cityname}</h2>
-            <div class="current-date"> ${cityDate}
-            </div>
-            </div>
-            <div class="current-time">
-            ${cityTime}
-            </div>
-            </div>`;
+  let cityTimeZone = citiesDropDownSelect.value;
+  if (cityTimeZone.length > 0) {
+    if (cityTimeZone === "current") {
+      cityTimeZone = moment.tz.guess();
+    }
+    let cityname = cityTimeZone.split("/")[1].replace("_", " ");
+    let cityDate = moment().tz(cityTimeZone).format("MMMM D, YYYY");
+    let cityTime = `${moment()
+      .tz(cityTimeZone)
+      .format("h:mm:ss")} <small class="am-pm"> ${moment()
+      .tz("Europe/London")
+      .format("A")} </small>`;
+
+    cityInterfaceElement.innerHTML = `<div class="current-timezone">
+              <div>
+              <h2 class="city-name">${cityname}</h2>
+              <div class="current-date"> ${cityDate}
+              </div>
+              </div>
+              <div class="current-time">
+              ${cityTime}
+              </div>
+              </div>`;
+  }
 }
 
-let citiesDropDownSelect = document.querySelector(".dropdown-cities");
-citiesDropDownSelect.addEventListener("change", selectingCity);
+setInterval(selectingCity, 1000);
 
 setInterval(timeZoneDateAndTime, 1000);
