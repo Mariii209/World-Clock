@@ -48,8 +48,6 @@ function timeZoneDateAndTime() {
   }
 }
 
-setInterval(timeZoneDateAndTime, 1000);
-
 function selectingCity(event) {
   let cityInterfaceElement = document.querySelector(".city");
   let cityname = event.target.value.split("/")[1].replace("_", " ");
@@ -62,15 +60,17 @@ function selectingCity(event) {
 
   cityInterfaceElement.innerHTML = `<div class="current-timezone">
             <div>
-              <h2 class="city-name">${cityname}</h2>
-              <div class="current-date"> ${cityDate}
-              </div>
+            <h2 class="city-name">${cityname}</h2>
+            <div class="current-date"> ${cityDate}
+            </div>
             </div>
             <div class="current-time">
-              ${cityTime}
+            ${cityTime}
             </div>
-          </div>`;
+            </div>`;
 }
 
 let citiesDropDownSelect = document.querySelector(".dropdown-cities");
 citiesDropDownSelect.addEventListener("change", selectingCity);
+
+setInterval(timeZoneDateAndTime, 1000);
