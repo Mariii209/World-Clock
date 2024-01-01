@@ -76,7 +76,8 @@ function selectingCity() {
               <div class="current-time">
               ${cityTime}
               </div>
-              </div>`;
+              </div>
+              <a href="/">Cities</a>`;
   }
 }
 
