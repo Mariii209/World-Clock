@@ -64,7 +64,7 @@ function selectingCity() {
     let cityTime = `${moment()
       .tz(cityTimeZone)
       .format("h:mm:ss")} <small class="am-pm"> ${moment()
-      .tz("Europe/London")
+      .tz(cityTimeZone)
       .format("A")} </small>`;
 
     cityInterfaceElement.innerHTML = `<div class="current-timezone">
