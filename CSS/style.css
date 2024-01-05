@@ -99,7 +99,7 @@ footer {
 
   .city-name,
   .current-date {
-    text-align: right;
+    text-align: left;
     margin-top: 5px;
   }
 
