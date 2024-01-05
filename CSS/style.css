@@ -95,4 +95,13 @@ footer {
   h2 {
     font-size: 18px;
   }
+
+  .current-time {
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .city-name {
+    margin-bottom: 5px;
+  }
 }
