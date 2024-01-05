@@ -85,8 +85,11 @@ footer {
   }
 
   .current-timezone {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    font-family: "Poppins", sans-serif;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
   }
 
   h1 {
@@ -95,16 +98,5 @@ footer {
 
   h2 {
     font-size: 18px;
-  }
-
-  .city-name,
-  .current-date {
-    text-align: left;
-    margin-top: 5px;
-  }
-
-  .current-time {
-    text-align: right;
-    margin-top: 5px;
   }
 }
