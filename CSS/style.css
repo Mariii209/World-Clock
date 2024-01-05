@@ -86,6 +86,7 @@ footer {
 
   .current-timezone {
     flex-direction: column;
+    align-items: flex-end;
   }
 
   h1 {
@@ -97,11 +98,7 @@ footer {
   }
 
   .current-time {
-    text-align: left;
+    text-align: right;
     margin-top: 5px;
-  }
-
-  .city-name {
-    margin-bottom: 5px;
   }
 }
